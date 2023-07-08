@@ -1,0 +1,1 @@
+{"version":3,"file":"TaskDetailDto.js","sourceRoot":"","sources":["../../../../../src/application/modules/task/dtos/TaskDetailDto.ts"],"names":[],"mappings":";;;AAAA,uCAAoC;AAEpC,MAAa,aAAc,SAAQ,iBAAO;IACxC,YACS,WAAW,EACX,SAAkB,EACzB,EAAU,EACV,MAAc;QAEd,KAAK,CAAC,EAAE,EAAE,MAAM,CAAC,CAAC;QALX,gBAAW,GAAX,WAAW,CAAA;QACX,cAAS,GAAT,SAAS,CAAS;IAK3B,CAAC;CACF;AATD,sCASC"}

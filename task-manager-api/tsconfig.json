@@ -1,0 +1,21 @@
+{
+    "version": "5.1.6",
+    "compilerOptions": {
+      "lib": ["ES2020"],
+      "outDir": "dist",
+      "sourceMap": true,
+      "target": "es6",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "allowJs": true,
+      "checkJs": true,
+      "allowSyntheticDefaultImports": false,
+      "alwaysStrict": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+  }
+  

@@ -1,0 +1,1 @@
+{"version":3,"file":"SessionUserDto.js","sourceRoot":"","sources":["../../../../../src/application/modules/security/dtos/SessionUserDto.ts"],"names":[],"mappings":";;;AAAA,6CAA0C;AAE1C,MAAa,cAAe,SAAQ,uBAAU;IAC5C,YAAmB,MAAc,EAAS,QAAgB,EAAE,MAAc;QACxE,KAAK,CAAC,MAAM,CAAC,CAAC;QADG,WAAM,GAAN,MAAM,CAAQ;QAAS,aAAQ,GAAR,QAAQ,CAAQ;IAE1D,CAAC;CACF;AAJD,wCAIC"}
