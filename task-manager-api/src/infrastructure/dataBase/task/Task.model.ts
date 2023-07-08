@@ -7,7 +7,7 @@ export const TaskSchema: Schema = new Schema(
     tittle: { type: String },
     description: { type: String },
     userId: { type: String },
-    completed: { type: Boolean },
+    completed: { type: Boolean, default: false },
   },
   { versionKey: false },
 );
