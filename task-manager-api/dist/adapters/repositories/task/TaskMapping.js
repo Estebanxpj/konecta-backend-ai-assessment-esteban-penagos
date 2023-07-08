@@ -6,7 +6,7 @@ class TaskMapping {
         if (!model)
             return null;
         const task = new Task_1.Task(model.userId, model.tittle, model.description, model.completed);
-        task.setId("1");
+        task.setId(model._id.toString());
         return task;
     }
 }

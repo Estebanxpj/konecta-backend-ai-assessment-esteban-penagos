@@ -50,7 +50,6 @@ export class AuthorizationMiddleware {
       }
 
       req.session = session;
-      //ErrorLog.setUser(session.Id);
     } catch (error) {
       throw new ApplicationError(
         resources.get(resourceKeys.AUTHORIZATION_REQUIRED),

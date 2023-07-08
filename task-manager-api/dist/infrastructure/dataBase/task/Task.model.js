@@ -7,7 +7,7 @@ exports.TaskSchema = new mongoose_1.Schema({
     tittle: { type: String },
     description: { type: String },
     userId: { type: String },
-    completed: { type: Boolean },
+    completed: { type: Boolean, default: false },
 }, { versionKey: false });
 exports.default = (0, mongoose_1.model)("tasks", exports.TaskSchema);
 //# sourceMappingURL=Task.model.js.map

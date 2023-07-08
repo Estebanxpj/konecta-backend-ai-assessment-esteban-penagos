@@ -40,7 +40,6 @@ class AuthorizationMiddleware {
                     throw new ApplicationError_1.ApplicationError(errorMessages_1.default.get(errorMessages_1.resourceKeys.AUTHORIZATION_REQUIRED), statusCodes.UNAUTHORIZED, null);
                 }
                 req.session = session;
-                //ErrorLog.setUser(session.Id);
             }
             catch (error) {
                 throw new ApplicationError_1.ApplicationError(errorMessages_1.default.get(errorMessages_1.resourceKeys.AUTHORIZATION_REQUIRED), statusCodes.UNAUTHORIZED, null);

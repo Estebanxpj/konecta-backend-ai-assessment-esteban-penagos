@@ -7,7 +7,7 @@ export default class UserMapping {
         if (!model) return null;
 
         const user = new User(model.userName, model.password)
-        user.setId("2");
+        user.setId(model._id.toString());
 
         return user;
     }

@@ -22,7 +22,8 @@ class CreateTaskUseCase extends BaseUseCase_1.BaseUseCase {
             const result = new BaseUseCase_1.ResultT();
             const audit = BaseUseCase_1.ClientAuditDto.mapToDomain(clientAudit, BaseUseCase_1.AuditActions.CreateTask);
             try {
-                // if (!this.validateRequest(result, taskDto)) return result;
+                if (!this.validateRequest(result, taskDto))
+                    return result;
                 const task = yield this.taskRepository.create(TaskMap_1.default.mapToDomain(taskDto, session.userId));
                 if (!task) {
                     result.setError(this.resources.get(this.resourceKeys.ERROR_SAVING_TASK), this.applicationStatus.INTERNAL_SERVER_ERROR);
@@ -42,7 +43,6 @@ class CreateTaskUseCase extends BaseUseCase_1.BaseUseCase {
         const isValid = this.validator.isValidEntry(result, {
             tittle: taskDto.tittle,
             description: taskDto.description,
-            completed: taskDto.completed,
         });
         return isValid;
     }

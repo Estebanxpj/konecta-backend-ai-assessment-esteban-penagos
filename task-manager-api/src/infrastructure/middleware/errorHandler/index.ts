@@ -18,7 +18,6 @@ export class ErrorHandlerMiddleware {
 
     if (error?.name === "ApplicationError") {
       console.log("Controlled application error:", error.message);
-      //ErrorLog.captureException(error);
       result.setError(error.message, error.errorCode);
       result.setMetadata(error.applicationAudit);
     } else {
@@ -27,7 +26,6 @@ export class ErrorHandlerMiddleware {
         resources.get(config.defaultError.message),
         config.defaultError.code
       );
-      //ErrorLog.captureException(error);
     }
 
     if (res.headersSent) {

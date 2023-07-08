@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const CoreServer_1 = require("./CoreServer");
+const AppSettings_1 = require("../../application/shared/settings/AppSettings");
 const errorMessages_1 = require("../../application/shared/locals/errorMessages");
 const authorization_1 = require("../middleware/authorization");
 const clientRequestInfo_1 = require("../middleware/clientRequestInfo");
@@ -19,7 +20,6 @@ const region_1 = require("../middleware/region");
 const dataBase_1 = require("../dataBase");
 const ConfigResources_1 = require("./ConfigResources");
 const jwt_1 = require("../security/jwt");
-const AppSettings_1 = require("../../application/shared/settings/AppSettings");
 class App {
     constructor(controllers) {
         this.app = (0, CoreServer_1.Server)();
@@ -48,13 +48,10 @@ class App {
         });
     }
     loadMiddleware() {
-        //this.app.use(cors());
         this.app.use(CoreServer_1.Server.json());
-        //this.app.use(helmet());
         this.app.use(region_1.default.handler);
         this.app.use(authorization_1.default.handler);
         this.app.use(clientRequestInfo_1.default.handler);
-        //this.app.use(awsDecryptMiddleware.handler);
     }
     loadControllers(controllers) {
         controllers.forEach((controller) => {

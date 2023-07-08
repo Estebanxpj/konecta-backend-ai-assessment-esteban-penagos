@@ -21,14 +21,12 @@ class ErrorHandlerMiddleware {
             const result = new result_tsk_1.Result();
             if ((error === null || error === void 0 ? void 0 : error.name) === "ApplicationError") {
                 console.log("Controlled application error:", error.message);
-                //ErrorLog.captureException(error);
                 result.setError(error.message, error.errorCode);
                 result.setMetadata(error.applicationAudit);
             }
             else {
                 console.log("No controlled application error:", error);
                 result.setError(errorMessages_1.default.get(ConfigResources_1.default.defaultError.message), ConfigResources_1.default.defaultError.code);
-                //ErrorLog.captureException(error);
             }
             if (res.headersSent) {
                 return next(result);

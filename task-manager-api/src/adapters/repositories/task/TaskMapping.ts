@@ -11,7 +11,7 @@ export default class TaskMapping {
       model.description,
       model.completed
     );
-    task.setId("1");
+    task.setId(model._id.toString());
 
     return task;
   }

@@ -1,5 +1,6 @@
 import BaseController from "../../adapters/controllers/shared/BaseController";
 import { Application, ErrorRequestHandler, Server } from "./CoreServer";
+import AppSettings from "../../application/shared/settings/AppSettings";
 import resources from "../../application/shared/locals/errorMessages";
 import authorizationMiddleware from "../middleware/authorization";
 import clientRequestInfo from "../middleware/clientRequestInfo";
@@ -9,7 +10,6 @@ import regionMiddleware from "../middleware/region";
 import ConnexionDataBase from "../dataBase";
 import config from "./ConfigResources";
 import Jwt from "../security/jwt";
-import AppSettings from "../../application/shared/settings/AppSettings";
 
 export default class App {
   public app: Application;
@@ -46,13 +46,10 @@ export default class App {
   }
 
   private loadMiddleware(): void {
-    //this.app.use(cors());
     this.app.use(Server.json());
-    //this.app.use(helmet());
     this.app.use(regionMiddleware.handler);
     this.app.use(authorizationMiddleware.handler);
     this.app.use(clientRequestInfo.handler);
-    //this.app.use(awsDecryptMiddleware.handler);
   }
 
   private loadControllers(controllers: BaseController[]): void {
