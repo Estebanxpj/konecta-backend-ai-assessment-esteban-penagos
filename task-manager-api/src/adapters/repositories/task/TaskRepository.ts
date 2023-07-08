@@ -1,9 +1,9 @@
+import { TaskDetailDto } from "../../../application/modules/task/dtos/TaskDetailDto";
 import { ITask } from "../../../application/modules/task/contracts/ITask";
 import TaskModel from "../../../infrastructure/dataBase/task/Task.model";
 import { Task } from "../../../domain/task/Task";
 import TaskMapping from "./TaskMapping";
 import { Types } from "mongoose";
-import { TaskDetailDto } from "../../../application/modules/task/dtos/TaskDetailDto";
 
 export class TaskRepository implements ITask {
   async create(task: Task): Promise<Task> {

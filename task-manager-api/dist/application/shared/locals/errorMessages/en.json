@@ -1,4 +1,5 @@
 {
+    "SOME_PARAMETERS_ARE_MISSING": "Some required values are missing: {{missingParams}}.",
     "INTERNAL_SERVER_ERROR": "Algo no salió como lo esperábamos.",
     "UNAUTHORIZED": "No se encuentra autorizado para realizar esta acción.",
     "ERROR_SAVING_USER": "Ocurrió un error guardando el usuario.",

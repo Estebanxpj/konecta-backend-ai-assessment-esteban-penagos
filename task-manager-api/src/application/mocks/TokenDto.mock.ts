@@ -1,0 +1,11 @@
+import { TokenDto } from "../modules/security/dtos/TokenDto";
+
+const tokenDtoMock = new TokenDto(
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjp7Im5vdGFyeUlkIjoiNWY2MjRjNWU2ZjYxNzczZGZjYWI4MGFiIiwibm90YXJ5RG9tYWluIjoidGVzdC52aXJ0dWFsbm90YXJ5LmNsb3VkIn0sImlhdCI6MTYwNTY1NzMwMSwiZXhwIjoxNjA1Njg2MTAxfQ.Azxrah22Ly0EhxsVkLoemunxkshksCriZjPMvIrjoRQ",
+);
+
+const tokenDtoUserMock = new TokenDto(
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjp7Im5vdGFyeUlkIjoiNWY2MjRjNWU2ZjYxNzczZGZjYWI4MGFiIiwibm90YXJ5RG9tYWluIjoibm90YXJpYTI1ZGVtZWRlbGxpbi5jb20iLCJwZXJzb25JZCI6IjVmNzM4NGU5MGU2NDRiMmJjNGJmZjMwNiIsInN0YXR1cyI6IkNSRUFURUQifSwiaWF0IjoxNjAxNDA2MjA1LCJleHAiOjE2MDE0MzUwMDV9.LwOpI3VtB6LuhTAYPGKk9DYVZLSto-Q5AJu5yR-10s8",
+);
+
+export { tokenDtoMock, tokenDtoUserMock, };
